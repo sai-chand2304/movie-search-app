@@ -9,7 +9,7 @@
       <h2>{{ movie.title }}</h2>
       <p><strong>Release:</strong> {{ movie.release_date }}</p>
       <p class="overview">
-        {{ movie.overview ? (movie.overview | slice:0:250) + '...' : 'No description available.' }}
+        {{ movie.overview ? (movie.overview | slice:0:150) + '...' : 'No description available.' }}
       </p>
       <a [routerLink]="['/movie', movie.id]" class="details-link">View Details →</a>
     </div>
