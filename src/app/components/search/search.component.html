@@ -1,0 +1,14 @@
+<div class="header">
+  <h3>🎬 Movie Search App</h3>
+</div>
+
+
+<div class="search-box">
+  <input [(ngModel)]="query" placeholder="Search movies..." />
+  <button (click)="search()">Search</button>
+</div>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<app-movie-list [movies]="movies"></app-movie-list>
