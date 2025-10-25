@@ -1,0 +1,10 @@
+.search-page {
+  background-image: url('../assets/netflix-app.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
