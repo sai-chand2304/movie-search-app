@@ -25,4 +25,8 @@ export class MovieService {
     const params = new HttpParams().set('api_key', this.apiKey);
     return this.http.get<MovieDetail>(`${this.baseUrl}/movie/${id}`, { params });
   }
+
+  getPopularMovies(): Observable<MovieSearchResponse> {
+    return this.http.get<MovieSearchResponse>(`${this.baseUrl}/movie/popular?api_key=${this.apiKey}&language=en-US&page=1`);
+  }
 }

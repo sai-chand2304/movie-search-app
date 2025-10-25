@@ -1,0 +1,74 @@
+/* Full-page cinematic flat lay background */
+.movie-detail-container {
+  background-image: url('../../../assets/netflix-app.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+  color: #333;
+  position: relative;
+}
+
+/* Light overlay for readability */
+.movie-detail-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* semi-transparent white overlay */
+  z-index: 0;
+}
+
+/* Card styling */
+.movie-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.85); /* light semi-transparent card */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Movie poster */
+.movie-poster {
+  width: 60%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Movie info */
+.movie-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff4500;
+  margin-bottom: 1rem;
+}
+
+.movie-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.movie-info .overview {
+  margin-top: 1rem;
+  line-height: 1.5;
+  color: #555;
+}

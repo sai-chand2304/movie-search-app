@@ -1,8 +1,12 @@
-<div *ngIf="movie">
-  <img [src]="imgBaseUrl + movie?.poster_path" alt="{{ movie?.title }}" />
-  <h2>{{ movie?.title }}</h2>
-  <p><strong>Release:</strong> {{ movie?.release_date }}</p>
-  <p><strong>Runtime:</strong> {{ movie?.runtime }} mins</p>
-  <p>{{ movie?.overview }}</p>
-  <p><strong>Genres:</strong> {{ getGenres() }}</p>
+<div class="movie-detail-container" *ngIf="movie">
+  <div class="movie-card">
+    <img class="movie-poster" [src]="imgBaseUrl + movie?.poster_path" alt="{{ movie?.title }}" />
+    <div class="movie-info">
+      <h2>{{ movie?.title }}</h2>
+      <p><strong>Release:</strong> {{ movie?.release_date }}</p>
+      <p><strong>Runtime:</strong> {{ movie?.runtime }} mins</p>
+      <p class="overview">{{ movie?.overview }}</p>
+      <p><strong>Genres:</strong> {{ getGenres() }}</p>
+    </div>
+  </div>
 </div>
